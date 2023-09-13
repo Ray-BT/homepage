@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+header {
+    width: 100vw;
+}
+
+.imglogo {
+    padding: 10px;
+}
+
+menu {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    
+    padding: 10px;
+}
+
+li {
+    padding: 10px;
+}
+
+.article-container {
+    padding: 20px;
+}
+
+.puzzleimage {
+    background: url(assets/images/image-web-3-mobile.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 450px;
+    width: 100%;
+    
+}
