@@ -14,6 +14,7 @@
 
 
 header {
+    overflow: hidden;
     width: 100vw;
 }
 
@@ -31,11 +32,16 @@ menu {
 ul {
     display: flex;
     list-style: none;
-    
+    text-decoration: none;
     padding: 10px;
 }
 
+ul a {
+    text-decoration: none;
+}
+
 li {
+
     padding: 10px;
 }
 
@@ -49,5 +55,75 @@ li {
     background-repeat: no-repeat;
     min-height: 450px;
     width: 100%;
+    
+}
+
+.Future-of-web {
+    padding-bottom: 30px;
+}
+
+.Future-of-web > p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    line-height: 1.5rem;
+}
+
+.read-more {
+    display: block;
+    background-color: #F15C51;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+}
+
+.news {
+    color: white;
+    background-color: hsl(240, 100%, 5%);
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.news > h1 {
+    color: #dfac6a;
+    padding-bottom: 20px;
+    
+}
+
+.news > h2 {
+    padding-bottom: 10px;
+}
+
+.paragrafo-com-borda{
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid white;
+}
+
+.paragrafo-sem-borda {
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.aside1-container {
+    display: grid;
+}
+
+.aside1 {
+    display: grid;
+    background: url(assets/images/image-retro-pcs.jpg);
+    background-repeat: no-repeat;
+    
+    height: 300px;
+}
+
+.aside2 {
+    
+}
+
+.aside3 {
     
 }
