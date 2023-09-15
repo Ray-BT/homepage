@@ -110,6 +110,8 @@ li {
 
 .aside1-container {
     display: grid;
+    height: 300px;
+    background-color: #F15C51;
 }
 
 .aside1 {
