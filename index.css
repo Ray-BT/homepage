@@ -21,14 +21,64 @@ header {
 }
 
 .imglogo {
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 10px;
+    font-size: 1em;
 }
 
 menu {
     display: flex;
     justify-content: space-between;
     height: 50px;
+    overflow: hidden;
+}
+
+.menu-faketrigger {
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+}
+
+.menu-faketrigger:checked ~ ul {
     
+}
+
+.menu-lines {
+    position: absolute;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+}
+
+.menu-lines span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #cdcdcd;
+    border-radius: 3px;
+    transition: all ease .3s;
+}
+
+.menu-faketrigger:checked ~ .menu-lines span {
+    /*background-color: #232323;*/
+}
+
+.menu-faketrigger:checked ~ .menu-lines span:nth-child(1) {
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scaleX(1.25);
+}
+
+.menu-faketrigger:checked ~ .menu-lines span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-faketrigger:checked ~ .menu-lines span:nth-child(3) {
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scaleX(1.25);
 }
 
 ul {
@@ -109,16 +159,15 @@ li {
     padding-bottom: 20px;
     margin-bottom: 10px;
 }
-
+/* /////////////// ASIDE-CONTAINER 1 ///////////////*/
 .aside1-container {
     display: grid;
-    
-    
     grid: 
     "image h1" 80px
     "image h2" 50px
     "image p"  80px / 165px;
     column-gap: 15px;
+    padding-bottom: 30px;
 }
 
 .aside1-container h1 {
@@ -137,29 +186,100 @@ li {
 
 .aside1-container p {
     grid-area: p;
-    
-    padding: 5px;
     line-height: 25px;
-    font-size: 1.2em;
+    font-size: 1em;
     
-   
 }
 
 .aside1 {
     background: url(assets/images/image-retro-pcs.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    
-    
     grid-area: image;
     
     
 }
 
-.aside2 {
+
+/* /////////////// ASIDE-CONTAINER 2 ///////////////*/
+.aside2-container {
+    display: grid;
+    grid: 
+    "image h1" 80px
+    "image h2" 50px
+    "image p"  80px / 165px;
+    column-gap: 15px;
+    padding-bottom: 30px;
+}
+
+.aside2-container h1 {
+    grid-area: h1;
+    font-size: 2.5em;
+    
+    
     
 }
 
-.aside3 {
+.aside2-container h2 {
+    grid-area: h2;
+    
+   
+}
+
+.aside2-container p {
+    grid-area: 1p;
+    line-height: 25px;
+    padding-top: 20px;
+    font-size: 1em;
+}
+
+.aside2 {
+    background: url(assets/images/image-top-laptops.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-area: image;
+    
     
 }
+
+/* /////////////// ASIDE-CONTAINER 3 ///////////////*/
+.aside3-container {
+    display: grid;
+    grid: 
+    "image h1" 80px
+    "image h2" 50px
+    "image p"  80px / 165px;
+    column-gap: 15px;
+    
+}
+
+.aside3-container h1 {
+    grid-area: h1;
+    font-size: 2.5em;
+    
+    
+    
+}
+
+.aside3-container h2 {
+    grid-area: h2;
+    
+   
+}
+
+.aside3-container p {
+    grid-area: 1p;
+    line-height: 25px;
+    padding-top: 20px;
+    font-size: 1em;
+}
+
+.aside3 {
+    background: url(assets/images/image-gaming-growth.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-area: image;
+    
+    
+}
+
