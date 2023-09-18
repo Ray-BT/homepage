@@ -1,8 +1,10 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
 
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Inter', sans-serif;
 }
 
 *,
@@ -110,16 +112,48 @@ li {
 
 .aside1-container {
     display: grid;
-    height: 300px;
-    background-color: #F15C51;
+    
+    
+    grid: 
+    "image h1" 80px
+    "image h2" 50px
+    "image p"  80px / 165px;
+    column-gap: 15px;
+}
+
+.aside1-container h1 {
+    grid-area: h1;
+    font-size: 2.5em;
+    
+    
+    
+}
+
+.aside1-container h2 {
+    grid-area: h2;
+    
+   
+}
+
+.aside1-container p {
+    grid-area: p;
+    
+    padding: 5px;
+    line-height: 25px;
+    font-size: 1.2em;
+    
+   
 }
 
 .aside1 {
-    display: grid;
     background: url(assets/images/image-retro-pcs.jpg);
     background-repeat: no-repeat;
+    background-size: contain;
     
-    height: 300px;
+    
+    grid-area: image;
+    
+    
 }
 
 .aside2 {
