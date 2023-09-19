@@ -5,7 +5,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
+    
 }
 
 *,
@@ -99,13 +99,19 @@ header {
     height: 100vh;
     padding-top: 100px;
     background-color: rgb(252, 252, 252) / 0.999;
-    margin-right: -300px;
+    
     list-style-type: none;
     line-height: 50px;
     transition: .3s;
     font-size: 1.3em;
     backdrop-filter: blur(1.5rem);
+    transform: translateX(100%);
     overflow-x: hidden;
+}
+
+.menu-faketrigger:checked ~ ul {
+    transform: translateX(0);
+    
 }
 
 ul > li > a { 
@@ -122,10 +128,7 @@ a:hover {
     transition: all ease .5s;
 }
 
-.menu-faketrigger:checked ~ ul {
-    margin-right: 0px;
-    
-}
+
 
 .menu-faketrigger:checked main {
     opacity: .5;
