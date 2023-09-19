@@ -11,13 +11,17 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    
 }
 
-
+body {
+    overflow-x: hidden;
+}
 
 header {
     overflow: hidden;
     width: 100vw;
+    
 }
 
 .imglogo {
@@ -27,30 +31,29 @@ header {
     font-size: 1em;
 }
 
-menu {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    overflow: hidden;
-}
 
 .menu-faketrigger {
     position: absolute;
     z-index: 1000;
+    right: 0;
+    top: 0;
     width: 35px;
     height: 35px;
     opacity: 0;
+    margin: 10px;
 }
 
-.menu-faketrigger:checked ~ ul {
-    
-}
+
 
 .menu-lines {
     position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
     z-index: 999;
     width: 35px;
     height: 35px;
+    
 }
 
 .menu-lines span {
@@ -61,6 +64,7 @@ menu {
     background-color: #cdcdcd;
     border-radius: 3px;
     transition: all ease .3s;
+    overflow: hidden;
 }
 
 .menu-faketrigger:checked ~ .menu-lines span {
@@ -81,24 +85,55 @@ menu {
     transform: rotate(-45deg) scaleX(1.25);
 }
 
-ul {
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-    padding: 10px;
+
+
+.menu ul {
+    position: absolute;
+    z-index: 998;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    padding-top: 100px;
+    background-color: rgb(252, 252, 252) / 0.999;
+    margin-right: -300px;
+    list-style-type: none;
+    line-height: 50px;
+    transition: .3s;
+    font-size: 1.3em;
+    backdrop-filter: blur(1.5rem);
+    overflow: hidden;
 }
 
-ul a {
-    text-decoration: none;
+ul > li > a { 
+    padding: 10px;  
+    text-decoration: none; 
+    color: rgb(252, 252, 252);
+    
 }
 
-li {
-
-    padding: 10px;
+a:hover {
+    text-decoration: underline;
+    text-decoration-style:dashed;
+    text-decoration-color: #dfac6a;
+    transition: all ease .5s;
 }
+
+.menu-faketrigger:checked ~ ul {
+    margin-right: 0px;
+    
+}
+
+.menu-faketrigger:checked main {
+    opacity: .5;
+    
+}
+
+
 
 .article-container {
     padding: 20px;
+    
 }
 
 .puzzleimage {
@@ -112,6 +147,11 @@ li {
 
 .Future-of-web {
     padding-bottom: 30px;
+    
+}
+
+.Future-of-web > h1 {
+
 }
 
 .Future-of-web > p {
@@ -130,7 +170,7 @@ li {
     color: white;
     font-size: 0.9em;
 }
-
+/* /////////////// NEWS ///////////////*/
 .news {
     color: white;
     background-color: hsl(240, 100%, 5%);
@@ -188,7 +228,8 @@ li {
     grid-area: p;
     line-height: 25px;
     font-size: 1em;
-    margin-top: -14px;
+    margin-top: -17px;
+    overflow: hidden;
 }
 
 .aside1 {
