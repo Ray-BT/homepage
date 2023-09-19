@@ -180,7 +180,7 @@ li {
 
 .aside1-container h2 {
     grid-area: h2;
-    
+    margin-top: -34px;
    
 }
 
@@ -188,7 +188,7 @@ li {
     grid-area: p;
     line-height: 25px;
     font-size: 1em;
-    
+    margin-top: -14px;
 }
 
 .aside1 {
@@ -222,7 +222,7 @@ li {
 
 .aside2-container h2 {
     grid-area: h2;
-    
+    margin-top: -34px;
    
 }
 
@@ -231,6 +231,7 @@ li {
     line-height: 25px;
     padding-top: 20px;
     font-size: 1em;
+    margin-top: -9px;
 }
 
 .aside2 {
@@ -263,7 +264,7 @@ li {
 
 .aside3-container h2 {
     grid-area: h2;
-    
+    margin-top: -34px;
    
 }
 
@@ -272,6 +273,7 @@ li {
     line-height: 25px;
     padding-top: 20px;
     font-size: 1em;
+    margin-top: -34px;
 }
 
 .aside3 {
