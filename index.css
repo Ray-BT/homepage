@@ -16,8 +16,14 @@
 }
 
 body {
+    display: grid;
+    min-height: 100vh;
     overflow-x: hidden;
-    max-width: 100vw;
+    grid-template-rows: min-content 1fr;
+}
+
+menu {
+    
 }
 
 header {
@@ -91,15 +97,11 @@ header {
 
 
 .menu ul {
-    position: absolute;
+    position: fixed;
     z-index: 998;
-    right: 0;
-    top: 0;
-    inset: 0 0 0 20%;
+    inset: 0 0 0 30%;
     height: 100vh;
     padding-top: 100px;
-    background-color: rgb(252, 252, 252) / 0.999;
-    
     list-style-type: none;
     line-height: 50px;
     transition: .3s;
@@ -109,9 +111,10 @@ header {
     overflow-x: hidden;
 }
 
+
+
 .menu-faketrigger:checked ~ ul {
-    transform: translateX(0);
-    
+    transform: translateX(0%);
 }
 
 ul > li > a { 
