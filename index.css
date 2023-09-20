@@ -39,7 +39,9 @@ header {
     overflow-x: hidden;
 }
 
-
+@media  (min-width: 35rem) {
+    
+}
 .menu-faketrigger {
     position: absolute;
     z-index: 1000;
@@ -149,9 +151,9 @@ a:hover {
     background: url(assets/images/image-web-3-mobile.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    min-height: 450px;
+    min-height: 350px;
     width: 100%;
-    margin-bottom: -130px;
+    margin-bottom: 0px;
 }
 
 .Future-of-web {
@@ -334,3 +336,86 @@ a:hover {
  
 }
 
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        
+        padding: 0px 100px 0px 100px;
+        
+    }
+
+    .menu-lines {
+        display: none;
+    }
+
+    .menu-faketrigger {
+        display: none;
+    }
+
+    .menu-lines span {
+        display: none;
+    }
+
+    .menu ul {
+        position: unset;
+        display: flex;
+        width: 500px;
+        background-color: #dfac6a;
+        padding-top: 0px;
+        line-height: normal;
+        transition: none;
+        backdrop-filter: unset;
+        transform: translateX(30%);
+        height: 50px;
+        overflow-x: hidden;
+    }
+
+    ul > li > a { 
+        
+        padding: 10px;  
+        text-decoration: none; 
+        color: rgb(0, 0, 0);
+        overflow-x: hidden;
+    }
+
+    .puzzleimage {
+        background: url(assets/images/image-web-3-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 350px;
+        margin: 0px;
+        width: 300px;
+        margin-bottom: 0px;
+    }
+
+    .container-future-of-web {
+        display: grid;
+        grid: 
+        "puzzleimage news" 
+        "Future-of-web news";
+        width: 100%;
+        gap: 30px;
+    }
+
+    .puzzleimage {
+        grid-area: puzzleimage;
+        width: 100%;
+    }
+
+    .Future-of-web {
+        grid-area: Future-of-web;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .Future-of-web h1 {
+        font-size: 4em;
+    }
+
+    .news {
+        grid-area: news; 
+        margin-top: 0px;
+    }
+
+}
