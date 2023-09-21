@@ -97,8 +97,8 @@ header {
 }
 
 
-
-.menu ul {
+@media screen and (min-width: 360px) and (max-width: 720px){
+    .menu ul {
     position: fixed;
     z-index: 998;
     inset: 0 0 0 30%;
@@ -111,6 +111,8 @@ header {
     backdrop-filter: blur(1.5rem);
     transform: translateX(100%);
     overflow-x: hidden;
+}
+
 }
 
 
@@ -339,12 +341,22 @@ a:hover {
 
 @media screen and (min-width: 1024px) {
 
-    main {
+    header {
         
-        padding: 0px 100px 0px 100px;
+        padding: 20px 100px 0px 100px;
         
+        height: auto;
     }
 
+    .imglogo {
+        padding: 0px;
+    }
+
+    menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 50px 0px 50px;
+    }
     .menu-lines {
         display: none;
     }
@@ -360,14 +372,14 @@ a:hover {
     .menu ul {
         position: unset;
         display: flex;
-        width: 500px;
-        background-color: #dfac6a;
+        justify-items: center;
         padding-top: 0px;
         line-height: normal;
         transition: none;
         backdrop-filter: unset;
-        transform: translateX(30%);
         height: 50px;
+        font-size: 1.3em;
+        list-style: none;
         overflow-x: hidden;
     }
 
@@ -379,43 +391,140 @@ a:hover {
         overflow-x: hidden;
     }
 
+    a:hover {
+        text-decoration: none;
+        text-decoration-style: none;
+        color: #dfac6a;
+        transition: all ease .2s;
+    }
+
+    main {
+        padding: 0px 100px 0px 100px;
+        
+    }
+
+    .article-container {
+        padding: 30px 50px 50px 50px;
+        
+    }
+
     .puzzleimage {
+        grid-area: puzzleimage;
         background: url(assets/images/image-web-3-mobile.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         min-height: 350px;
         margin: 0px;
-        width: 300px;
-        margin-bottom: 0px;
+        margin-bottom: 0px; 
     }
 
     .container-future-of-web {
         display: grid;
         grid: 
-        "puzzleimage news" 
-        "Future-of-web news";
-        width: 100%;
-        gap: 30px;
-    }
-
-    .puzzleimage {
-        grid-area: puzzleimage;
-        width: 100%;
+        "puzzleimage news" auto
+        "Future-of-web news" 200px;
+        margin-bottom: 100px;
+        gap: 60px;
     }
 
     .Future-of-web {
         grid-area: Future-of-web;
+        display: grid;
+        grid: 
+        "h1 p" 160px 
+        "h1 a" 40px;
         width: 100%;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
+        
     }
 
     .Future-of-web h1 {
-        font-size: 4em;
+        grid-area: h1;
+        width: 400px;
+        font-size: 3.7em;
+    }
+
+    .Future-of-web p {
+        grid-area: p;
+        padding: 50px;
+        color: rgb(90, 88, 88);
+        font-size: 1.5em;
+        margin-top: 20px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        
+        max-width: 600px;
+        min-width: 500px;
+    }
+
+    .Future-of-web a {
+        grid-area: a;
+        height: 40px;
+        width: 170px;
+        text-decoration: none;
+        margin-left: 50px;
+    }
+
+    .read-more {
+        font-size: 1.1em;
+    }
+
+    .read-more:hover {
+        color: white;
+    }
+
+    .Future-of-web a:hover {
+        background-color: #00001A;
     }
 
     .news {
         grid-area: news; 
+        padding: 30px;
+        max-width: 540px;
+        margin-bottom: 0px;
         margin-top: 0px;
     }
 
+    .news h1 {
+        font-size: 2.5em;
+    }
+
+    .news h2:hover {
+        color: #dfac6a;
+        cursor: pointer;
+    }   
+
+    .paragrafo-com-borda {
+        padding-bottom: 50px;
+        margin-bottom: 60px;
+        
+    }
+
+    .aside-container-geral {
+        display: grid;
+        grid: "aside1 aside2 aside3";
+        gap: 60px;
+    }
+
+    .aside1-container {
+        grid-area: aside1;
+    }
+
+    .aside2-container {
+        grid-area: aside2;
+    }
+
+    .aside2-container p {
+        line-height: 25px;
+        padding-top: 0px;
+        font-size: 1em;
+        margin-top: -9px;
+    }
+
+    .aside3-container {
+        grid-area: aside3;
+    }
 }
+
+
+
