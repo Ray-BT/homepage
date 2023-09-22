@@ -18,7 +18,6 @@
 body {
     display: grid;
     min-height: 100vh;
-    overflow-x: hidden;
     grid-template-rows: min-content 1fr;
 }
 
@@ -151,7 +150,7 @@ a:hover {
 
 .puzzleimage {
     background: url(assets/images/image-web-3-mobile.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     min-height: 350px;
     width: 100%;
@@ -338,8 +337,188 @@ a:hover {
  
 }
 
+@media screen and (min-width: 721px ) and (max-width: 950px) {
+    header {
+        
+        padding: 0px;
+        
+        height: auto;
+    }
 
-@media screen and (min-width: 1024px) {
+    
+
+    .imglogo {
+        padding: 0px;
+        
+    }
+
+    menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 50px 0px 50px;
+    }
+    .menu-lines {
+        display: none;
+    }
+
+    .menu-faketrigger {
+        display: none;
+    }
+
+    .menu-lines span {
+        display: none;
+    }
+
+    .menu ul {
+        position: unset;
+        display: flex;
+        justify-items: center;
+        padding-top: 0px;
+        line-height: normal;
+        transition: none;
+        backdrop-filter: unset;
+        height: 50px;
+        font-size: 1.3em;
+        list-style: none;
+        overflow-x: hidden;
+    }
+
+    ul > li > a { 
+        
+        padding: 10px;  
+        text-decoration: none; 
+        color: rgb(0, 0, 0);
+        overflow-x: hidden;
+        transition: all ease-in-out .2s;
+    }
+
+    a:hover {
+        text-decoration: none;
+        text-decoration-style: none;
+        color: #dfac6a;
+        
+    }
+    
+    .article-container {
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.245);
+    }
+
+    .aside-container-geral {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        gap: 60px;
+        
+    }
+    
+    .aside1-container, .aside2-container, .aside3-container {
+        min-width: 350px;
+    }
+
+}
+
+@media screen and (min-width: 950px ) and (max-width: 1596px) {
+    header {
+        
+        padding: 0px;
+        height: auto;
+    }
+
+    .imglogo {
+        padding: 0px;
+        
+    }
+
+    menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 50px 0px 50px;
+    }
+    .menu-lines {
+        display: none;
+    }
+
+    .menu-faketrigger {
+        display: none;
+    }
+
+    .menu-lines span {
+        display: none;
+    }
+
+    .menu ul {
+        position: unset;
+        display: flex;
+        justify-items: center;
+        padding-top: 0px;
+        line-height: normal;
+        transition: none;
+        backdrop-filter: unset;
+        height: 50px;
+        font-size: 1.3em;
+        list-style: none;
+        overflow-x: hidden;
+    }
+
+    ul > li > a { 
+        
+        padding: 10px;  
+        text-decoration: none; 
+        color: rgb(0, 0, 0);
+        overflow-x: hidden;
+        transition: all ease-in-out .2s;
+    }
+
+    a:hover {
+        text-decoration: none;
+        text-decoration-style: none;
+        color: #dfac6a;
+        
+    }
+
+    
+    
+    .container-future-of-web {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .puzzleimage {
+        grid-column: 1 / 3;
+    }
+
+    .Future-of-web {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    .news {
+        margin-top: 0px;
+        grid-row: 1 / 3;
+    }
+
+    .article-container {
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.245);
+    }
+
+    .aside-container-geral {
+        display: flex;
+        overflow-x: auto;
+        gap: 60px;
+        justify-content: space-between;
+        
+    }
+
+    .aside1-container, .aside2-container, .aside3-container {
+        min-width: 350px;
+    }
+}
+
+
+
+@media screen and (min-width: 1596px) {
 
     header {
         
@@ -347,6 +526,8 @@ a:hover {
         
         height: auto;
     }
+
+    
 
     .imglogo {
         padding: 0px;
@@ -389,13 +570,14 @@ a:hover {
         text-decoration: none; 
         color: rgb(0, 0, 0);
         overflow-x: hidden;
+        transition: all ease-in-out .2s;
     }
 
     a:hover {
         text-decoration: none;
         text-decoration-style: none;
         color: #dfac6a;
-        transition: all ease .2s;
+        
     }
 
     main {
@@ -405,12 +587,13 @@ a:hover {
 
     .article-container {
         padding: 30px 50px 50px 50px;
-        
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.245);
     }
 
     .puzzleimage {
         grid-area: puzzleimage;
         background: url(assets/images/image-web-3-mobile.jpg);
+        align-self: start;
         background-size: cover;
         background-repeat: no-repeat;
         min-height: 350px;
@@ -421,10 +604,15 @@ a:hover {
     .container-future-of-web {
         display: grid;
         grid: 
-        "puzzleimage news" auto
-        "Future-of-web news" 200px;
+        "puzzleimage news"
+        "Future-of-web news";
         margin-bottom: 100px;
         gap: 60px;
+    }
+
+    .container2-future {
+        display: flex;
+        align-content: flex-start;
     }
 
     .Future-of-web {
@@ -435,7 +623,7 @@ a:hover {
         "h1 a" 40px;
         width: 100%;
         padding-bottom: 0px;
-        
+        align-self: start;
     }
 
     .Future-of-web h1 {
@@ -480,7 +668,8 @@ a:hover {
     .news {
         grid-area: news; 
         padding: 30px;
-        max-width: 540px;
+        max-width: 555px;
+        min-width: 420px;
         margin-bottom: 0px;
         margin-top: 0px;
     }
@@ -501,8 +690,9 @@ a:hover {
     }
 
     .aside-container-geral {
-        display: grid;
-        grid: "aside1 aside2 aside3";
+        display: flex;
+        
+        justify-content: space-between;
         gap: 60px;
     }
 
